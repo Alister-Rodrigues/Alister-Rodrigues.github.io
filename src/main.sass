@@ -1,0 +1,122 @@
+$font-stack: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif
+$sidenav-width: 25vw
+
+// :root[data-theme="light"]
+//     --text: #0e0e10
+//     --background: #e9eaed
+//     --primary: #383d4d
+//     --secondary: #99a2bd
+//     --accent: #4c5985
+
+// :root[data-theme="dark"]
+//     --text: #efeff1
+//     --background: #121316
+//     --primary: #b2b7c7
+//     --secondary: #424b66
+//     --accent: #7a87b3
+
+:root[data-theme="light"]
+    --text: #171914
+    --background: #f7f8f6
+    --primary: #4a4f40
+    --secondary: #a2a4b3
+    --accent: #7e6a81
+
+:root[data-theme="dark"]
+    --text: #e9ebe6
+    --background: #080907
+    --primary: #babfb0
+    --secondary: #4c4e5d
+    --accent: #927e95
+
+:root
+    line-height: 1.5
+    font: 100% $font-stack
+    font-weight: 400
+
+    color-scheme: light dark
+    color: var(--text)
+    background-color: var(--background)
+
+    font-synthesis: none
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+body
+    margin: 0
+    padding: 0
+
+.error-page
+    h1, p
+        text-align: center
+.sidebar
+    display: flex
+    flex-direction: column
+    position: fixed
+    left: 1rem
+    top: 1rem
+    width: $sidenav-width
+    height: calc(100% - 2rem)
+    border-radius: 1rem
+    text-align: center
+    background-color: var(--secondary)
+
+    #side-nav-title
+        text-decoration: none
+        font-size: 2.5rem
+        margin-top: 2rem
+        color: var(--text)
+
+    ul
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        list-style: none
+        padding: 1rem
+        margin:
+            top: auto
+            bottom: 2rem
+
+        li
+            font-size: 2rem
+            border-radius: 1rem
+            transition: background-color 0.2s ease-in-out
+
+            &:hover
+                background-color: var(--accent)
+            a
+                display: block
+                height: 4rem
+                line-height: 4rem
+                text-align: center
+                text-decoration: none
+                color: var(--text)
+
+.content-grid
+    display: grid
+    grid-auto-rows: minmax(20rem ,max-content)
+    margin:
+        top: 1rem
+        left: calc($sidenav-width + 2rem)
+        right: 1rem
+    gap: 1rem
+
+    &.grid-col-2
+        grid-template-columns: repeat(2, 1fr)
+    &.grid-col-3
+        grid-template-columns: repeat(3, 1fr)
+
+.card
+    border: 1px solid var(--secondary)
+    background-color: var(--secondary)
+    border-radius: 1rem
+
+    &.grid-col-span-2
+        grid-column: span 2
+    &.grid-col-span-3
+        grid-column: span 3
+    &.grid-row-span-2
+        grid-row: span 2
+    &.grid-row-span-3
+        grid-row: span 3
