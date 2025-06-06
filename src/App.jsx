@@ -1,12 +1,11 @@
 import Sidebar from './components/UI/Sidebar'
-import { Outlet} from 'react-router-dom';
-
+import Home from './pages/Home';
 function App() {
   return (
     <>
       <Sidebar />
       <>
-        <Outlet />
+        <Home />
       </>
     </>
   )
