@@ -1,14 +1,22 @@
 import { Link } from "react-router-dom";
+import MyLogo from "../../assets/icons/mylogo.svg?react";
+import classes from "./uisheet.module.sass";
 
 /* eslint-disable react/prop-types */
 function Sidebar() {
   return (
-    <nav className="sidebar">
-      <Link to={"/"} id="side-nav-title">Alister <br />Rodrigues</Link>
-      <ul>
+    <nav className={classes.sidebar}>
+      <Link to={"/"} id="side-nav-title">
+        <MyLogo width="10rem" />
+      </Link>
+      {/* <ul>
         <NavItems to="/portfolio">Portfolio</NavItems>
-        <NavItems to="/blog">Blog</NavItems>
-      </ul>
+      </ul> */}
+      <div>
+        <h1>Welcome</h1>
+        <h2>I&#39;m Alister Rodrigues</h2>
+      </div>
+      <div></div>
     </nav>
   );
 }

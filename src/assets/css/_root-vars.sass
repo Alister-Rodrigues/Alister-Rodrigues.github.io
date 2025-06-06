@@ -1,0 +1,30 @@
+@use 'variables' as var
+
+:root
+    @media (prefers-color-scheme: light)
+        --text: #111112
+        --background: #f9f9fa
+        --primary: #777f92
+        --secondary: #b5bcc9
+        --accent: #8895af
+
+    @media (prefers-color-scheme: dark)
+        --text: #ededee
+        --background: #050506
+        --primary: #6d7588
+        --secondary: #363d4a
+        --accent: #505d77
+
+:root
+    line-height: 1.5
+    font: 100% var.$font-stack
+    font-weight: 400
+
+    color-scheme: light dark
+    color: var(--text)
+    background-color: var(--background)
+
+    font-synthesis: none
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale

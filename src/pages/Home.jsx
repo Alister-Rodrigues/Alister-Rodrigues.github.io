@@ -1,15 +1,19 @@
-import Card from "../components/UI/Card";
+import DisplayCard from "../components/Card/DisplayCard";
 import Content from "../components/UI/Content";
+import Portfolio from "../portfolio/index";
 
 function Home() {
-    return (
+  return (
+    <>
     <Content className="content-grid grid-col-3">
-      <Card className="grid-col-span-2" />
-      <Card className="grid-row-span-2" />
-      <Card className="grid-row-span-2" />
-      <Card />
-      <Card className="grid-col-span-2" />
-    </Content>)
+      {/* <DisplayCard className="grid-col-span-3">
+        <h1>Welcome</h1>
+        <h2>I&#39;m Alister Rodrigues</h2>
+      </DisplayCard> */}
+      <Portfolio />
+    </Content>
+    </>
+  )
 }
 
 export default Home;
